@@ -28,9 +28,19 @@ function FileErr(err){
         }
 })};
 
+//default route
 app.get('/', function(req, res){
     var file = path.join(__dirname, 'index.html');
     fs.createReadStream(file, 'utf8', FileErr())
         .pipe(res)
 });
 
+//image search route
+app.get('/api/imagesearch/:search', function(req,res){
+    
+})
+
+// timestamp route
+app.get('/api/latest/imagesearch', function(req, res){
+    
+})
