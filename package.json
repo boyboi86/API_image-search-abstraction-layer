@@ -1,0 +1,20 @@
+{
+  "name": "img-search-abstract",
+  "version": "1.0.0",
+  "description": "FCC tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boyboi86/API_image-search-abstraction-layer.git"
+  },
+  "author": "boyboi86",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boyboi86/API_image-search-abstraction-layer/issues"
+  },
+  "homepage": "https://github.com/boyboi86/API_image-search-abstraction-layer#readme"
+}
