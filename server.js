@@ -1,6 +1,8 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     details = require('./details.js'),
+    searchCtrl = require('./search.ctrl.js'),
+    imgCtrl = require('./img.ctrl.js')
     fs = require('fs'),
     path = require('path');
     
@@ -36,11 +38,7 @@ app.get('/', function(req, res){
 });
 
 //image search route
-app.get('/api/imagesearch/:search', function(req,res){
-    
-})
+app.get('/api/imagesearch/:search', imgCtrl)
 
 // timestamp route
-app.get('/api/latest/imagesearch', function(req, res){
-    
-})
+app.get('/api/latest/imagesearch', searchCtrl )

@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
     
-var search = Schema({
+var search =new Schema({
     term: {
         type: String,
         required: true

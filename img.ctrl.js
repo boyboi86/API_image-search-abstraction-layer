@@ -8,30 +8,24 @@ function imgSearch(req , res){
             reject(console.log('Schema not created'))
         } else {
         resolve(
-            var newSearch = new Search ({
+             new Search ({
             term: req.params.search,
             timestamp: new Date().toLocaleString()
-            ).save()}
-        })
+            }).save())
+        }
     });
-}
+
 
 //call for google API
-function apiCall( req, res){
-    return new Promise(function(resolve, reject){
-        if(err){
-            reject(console.log('Google call not made'))
-        } else {
-            resolve( 
-                got('https://www.googleapis.com/customsearch/v1', {
+got('https://www.googleapis.com/customsearch/v1', {
                   query: {
                     q: req.params.search,
                     searchType: 'image',
                     cx: detail.GOOGLE_CX,
-                    key: detail.GOOGLE_KEY',
+                    key: detail.GOOGLE_KEY,
                     start: req.query.offset || 10},
                   json: true
-                }))
+                })
                 .then(function(data) {
                     console.log(data)
                   var results = data.body.items.map(function(item) {
@@ -42,10 +36,8 @@ function apiCall( req, res){
                       context: item.image.contextLink
                     }
                   });
-                  res.json(results);
-                });
-              };
-        }
-        
-    });
-}
+                  res.json(results)
+                })};
+
+
+module.exports =  imgSearch;
