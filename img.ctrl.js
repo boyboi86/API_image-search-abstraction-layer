@@ -31,7 +31,9 @@ function apiCall( req, res){
                     key: detail.GOOGLE_KEY',
                     start: req.query.offset || 10},
                   json: true
-                }).then(function(data) {
+                }))
+                .then(function(data) {
+                    console.log(data)
                   var results = data.body.items.map(function(item) {
                     return {
                       url: item.link,
@@ -42,7 +44,7 @@ function apiCall( req, res){
                   });
                   res.json(results);
                 });
-              };)
+              };
         }
         
     });
