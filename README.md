@@ -15,3 +15,5 @@ There are two routes which use can use.
 This repo does not contain some files which may require the app to work.
 
 If the heroku doesn't reply (status 503), it's most likely because of the expired google keys.
+
+It is possible to use third party npm rather than trying to do custom search
